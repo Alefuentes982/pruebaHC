@@ -1,0 +1,441 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HC-Producciones</title>
+  <link rel="icon" type="image/png" href="{% static 'assets/img/HCproducciones.png' %}">
+  <meta name="description" content="Pagina de productora de eventos">
+  <meta name="author" content="Ale Fuentes">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+  <!--Font awesome-->
+  <script src="https://kit.fontawesome.com/8657e78088.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-izq d-flex justify-content-center align-items-center">
+        <img src="{% static 'assets/img/logos/HC2.png' %}" alt="Logo" width="130" class="logo-nav d-inline-block align-text-top mt-4">
+        <a class="navbar-brand ms-3" href="#">HC Producciones</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item quien">
+            <a class="nav-link" aria-current="page" href="#quienes">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#destacados">Servicios - Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#destacados">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class="btn btn-outline-warning my-2 my-sm-0 dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Iniciar Sesión
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'login' %}">Iniciar Sesión</a></li>
+                <li><a class="dropdown-item" href="{% url 'register' %}">Registrarse</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carrusel -->
+  <div class="container">
+    <section class="carrusel text-center mx-auto">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'assets/img/portada/portada1.jpg' %}" class="carousel-image w-100" alt="...">
+            <img src="{% static 'assets/img/HCproducciones.png' %}" class="overlay-image" alt="Imagen encima">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'assets/img/portada/portada2.jpg' %}" class="carousel-image w-100" alt="...">
+            <img src="{% static 'assets/img/HCproducciones.png' %}" class="overlay-image" alt="Imagen encima">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'assets/img/portada/portada3.jpg' %}" class="carousel-image w-100 img-fluid" alt="...">
+            <img src="{% static 'assets/img/HCproducciones.png' %}" class="overlay-image" alt="Imagen encima">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap container-fluid">
+    <!-- Quienes Somos-->
+    <div class="quien container-fluid d-none d-sm-block pt-5 py-5" id="quienes">
+      <div class="row">
+        <section class="quienes-somos text-white col-lg-12">
+          <div class="col-12 text-center pb-5">
+            <h2>¿QUIENES SOMOS?</h2>
+          </div>
+          <div class="parrafos row justify-content-center">
+            <div class="col-lg-4 col-md-4 col-sm-12 text-left mb-4">
+              <div class="icons mb-2">
+                <i class="fa-solid fa-briefcase fa-2x text-center"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, totam atque ipsum
+                nihil saepe, est unde doloremque dolorem consequatur sed debitis cum dolore harum
+                voluptatem
+                ducimus nemo, velit minima quas. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Reprehenderit, totam atque ipsum nihil saepe, est unde doloremque dolorem consequatur
+                sed
+                debitis cum dolore harum voluptatem ducimus nemo, velit minima quas.Lorem ipsum dolor
+                sit
+                amet consectetur adipisicing elit. Reprehenderit, totam atque ipsum nihil saepe, est
+                unde
+                doloremque dolorem consequatur sed debitis cum dolore harum voluptatem ducimus nemo,
+                velit
+                minima quas.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-left mb-4">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, totam atque ipsum
+                nihil saepe, est unde doloremque dolorem consequatur sed debitis cum dolore harum
+                voluptatem
+                ducimus nemo, velit minima quas. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Reprehenderit, totam atque ipsum nihil saepe, est unde doloremque dolorem consequatur
+                sed
+                debitis cum dolore harum voluptatem ducimus nemo, velit minima quas.Lorem ipsum dolor
+                sit
+                amet consectetur adipisicing elit. Reprehenderit, totam atque ipsum nihil saepe, est
+                unde
+                doloremque dolorem consequatur sed debitis cum dolore harum voluptatem ducimus nemo,
+                velit
+                minima quas.</p>
+              <div class="icons mb-2">
+                <i class="fa-solid fa-address-book fa-2x text-center"></i>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-left mb-4">
+              <div class="icons mb-2">
+                <i class="fa-solid fa-globe fa-2x text-center"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, totam atque ipsum
+                nihil saepe, est unde doloremque dolorem consequatur sed debitis cum dolore harum
+                voluptatem
+                ducimus nemo, velit minima quas. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Reprehenderit, totam atque ipsum nihil saepe, est unde doloremque dolorem consequatur
+                sed
+                debitis cum dolore harum voluptatem ducimus nemo, velit minima quas.Lorem ipsum dolor
+                sit
+                amet consectetur adipisicing elit. Reprehenderit, totam atque ipsum nihil saepe, est
+                unde
+                doloremque dolorem consequatur sed debitis cum dolore harum voluptatem ducimus nemo,
+                velit
+                minima quas.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Servicios Eventos -->
+    <div class="row" id="destacados">
+      <div class="col-12 text-center pb-5">
+        <div class="col-12 text-center text-white col-lg-12pb-5">
+          <h2>Servicios - Eventos</h2>
+        </div>
+      </div>
+      <!-- Card #1-->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card text-white" data-bs-toggle="modal" data-bs-target="#modal1">
+          <img src="{% static 'assets/img/cards/matrimonio.jpg' %}" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Matrimonios</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-white" id="exampleModalLabel">Matrimonios</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img id="modalImage" src="{% static 'assets/img/cards/matrimonio.jpg' %}" class="img-fluid" alt="Imagen en modal">
+              <div class="my-4">
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt error fuga
+                  voluptatibus. Necessitatibus, voluptates non sit, quam eum enim omnis voluptatum minima ut quae
+                  numquam consequuntur dolores. Veritatis, iure recusandae?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card #2-->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card text-white" data-bs-toggle="modal" data-bs-target="#modal2">
+          <img src="{% static 'assets/img/cards/bautizos.jpg' %}" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bautizos</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-white" id="exampleModalLabel">Bautizos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img id="modalImage" src="{% static 'assets/img/cards/bautizos.jpg' %}" class="img-fluid" alt="Imagen en modal">
+              <div class="my-4">
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt error fuga
+                  voluptatibus. Necessitatibus, voluptates non sit, quam eum enim omnis voluptatum minima ut quae
+                  numquam consequuntur dolores. Veritatis, iure recusandae?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card #3-->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card text-white" data-bs-toggle="modal" data-bs-target="#modal3">
+          <img src="{% static 'assets/img/cards/graduacion.jpeg' %}" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Graduaciones</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-white" id="exampleModalLabel">Graduaciones</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img id="modalImage" src="{% static 'assets/img/cards/graduacion.jpeg' %}" class="img-fluid"
+                alt="Imagen en modal">
+              <div class="my-4">
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt error fuga
+                  voluptatibus. Necessitatibus, voluptates non sit, quam eum enim omnis voluptatum minima ut quae
+                  numquam consequuntur dolores. Veritatis, iure recusandae?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card #4-->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card text-white" data-bs-toggle="modal" data-bs-target="#modal4">
+          <img src="{% static 'assets/img/cards/corporativo.jpg' %}" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Corporativos</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+              the card's content.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-white" id="exampleModalLabel">Corporativos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img id="modalImage" src="{% static 'assets/img/cards/corporativo.jpg' %}" class="img-fluid"
+                alt="Imagen en modal">
+              <div class="my-4">
+                <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt error fuga
+                  voluptatibus. Necessitatibus, voluptates non sit, quam eum enim omnis voluptatum minima ut quae
+                  numquam consequuntur dolores. Veritatis, iure recusandae?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner platos -->
+      <div class="container-fluid">
+        <div class="row align-items-center py-5">
+          <div class="col">
+            <img src="{% static 'assets/img/platos/plato1.png' %}" class="img-fluid" alt="Plato 1">
+          </div>
+          <div class="col">
+            <img src="{% static 'assets/img/platos/plato2.png' %}" class="img-fluid" alt="Plato 2">
+          </div>
+          <div class="col">
+            <img src="{% static 'assets/img/platos/plato3.png' %}" class="img-fluid" alt="Plato 3">
+          </div>
+          <div class="col">
+            <img src="{% static 'assets/img/platos/plato4.png' %}" class="img-fluid" alt="Plato 4">
+          </div>
+          <div class="col">
+            <img src="{% static 'assets/img/platos/plato5.png' %}" class="img-fluid" alt="Plato 5">
+          </div>
+        </div>
+      </div>
+
+      <!-- Opiniones -->
+      <section id="opinioneshome">
+        <div class="container-fluid">
+          <div class="row" style="padding: 5% 5%; background: Black;">
+            <h1 class="text-center py-5 text-white" style="color: #343a40;">Opiniones de nuestros clientes:</h1>
+
+            <!-- Primera opinión -->
+            <div class="col-md-6 mb-4">
+              <div class="card text-center p-3 bg-light">
+                <img src="https://blackandgreen.cl/wp-content/uploads/2022/05/opinion1-byg-01.png" alt="Opinión 1"
+                  class="img-fluid rounded-circle mb-3" style="width: 100px; border-color: #a8c728;">
+                <p style="color: #a8c728;">Daniela Aranguiz: «Muy buen servicio»</p>
+                <p style="font-size: 16px; color: #343a40;">Hola, Mi nombre es Daniela Aranguiz y les escribo sólo para
+                  agredecer el muy buen servicio y la excelente atención recibida de parte del equipo de produccion en
+                  el matrimonio de Javiera Santibañez y Valentín Rojas realizado en La Dehesa el sábado 20 de abril.
+                  Lo pasamos increible con el Mago Enmascarado del show preparado para los novios! El mago lo hizo de
+                  nuevo!
+                  Excelente servicio.</p>
+              </div>
+            </div>
+
+            <!-- Segunda opinión -->
+            <div class="col-md-6 mb-4">
+              <div class="card text-center bg-light p-3">
+                <img src="https://blackandgreen.cl/wp-content/uploads/2022/05/opinion1-byg-02.png" alt="Opinión 2"
+                  class="img-fluid rounded-circle mb-3" style="width: 100px; border-color: #a8c728;">
+                <p style="color: #a8c728;">Carolina Herrera: «Un día maravilloso»</p>
+                <p style="font-size: 16px; color: #343a40;">Muchas gracias a todo el equipo de HC Producciones, nosotros
+                  hicimos nuestro matrimonio con este bello equipo y fue una experiencia maravillosa. Somos de Viña del
+                  Mar, y buscamos un lugar cercano para poder celebrarlo en la playa ya fue un sueño que teníamos desde
+                  que nos conocimos. Doy gracias a Ximena y su equipo, nos sentimos muy considerados en todo lo que
+                  pedimos para nuestro matrimonio.</p>
+              </div>
+            </div>
+
+            <!-- Video -->
+            <div class="col-md-12 mb-4 text-center">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtOaD9255s4" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <div class="row" id="contacto">
+        <div class="text-center text-white col-lg-12 py-3">
+          <h2>CONTACTO</h2>
+        </div>
+        <form class="col-6 mx-auto">
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label text-white" data-bs-toggle="tooltip"
+              title="Ingresa tu nombre" data-bs-tooltip-color="bg-dark" data-bs-placement="right">Nombre</label>
+            <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+              data-bs-toggle="tooltip" title="Ingresa tu nombre" data-bs-tooltip-color="bg-dark">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputSubject" class="form-label text-white" data-bs-toggle="tooltip"
+              title="Ingresa el asunto de tu mensaje" data-bs-tooltip-color="bg-dark"
+              data-bs-placement="right">Asunto</label>
+            <input type="text" class="form-control" id="exampleInputSubject" data-bs-toggle="tooltip"
+              title="Ingresa el asunto de tu mensaje" data-bs-tooltip-color="bg-dark">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white" data-bs-toggle="tooltip"
+              title="Escribe tu mensaje aquí" data-bs-tooltip-color="bg-dark" data-bs-placement="right">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" data-bs-toggle="tooltip"
+              title="Escribe tu mensaje aquí" data-bs-tooltip-color="bg-dark"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary text-white card" data-bs-toggle="tooltip" title="Enviar mensaje"
+            data-bs-tooltip-color="bg-dark">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="card text-center text-white pt-4 mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 mt-3 text-center">
+            <a href="https://instagram.com" target="_blank">
+              <i class="fa-brands fa-square-instagram fa-3x text-white mx-1"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter-square fa-3x text-white mx-1"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+              <i class="fa-brands fa-square-facebook fa-3x text-white mx-1"></i>
+            </a>
+            <p class="foot text-white mx-1 px-1"><span style="background-color: black;">Freire #862, Santiago
+                +56 9 9999 9999 <br> contacto@HCproducciones.cl</span></p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="col-12">
+      <p class="text-sm text-center text-white py-2">© 2024 HC Producciones Chile | Desarrollado por D-Software</p>
+    </div>
+
+    <!-- scripts / CDN -->
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--Popper js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+    <!-- Mi script -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

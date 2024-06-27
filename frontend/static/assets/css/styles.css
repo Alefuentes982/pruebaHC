@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    /*font-family: "Open Sans", sans-serif;*/
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 300;*/
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.navbar {  
+    height: 13%;
+    background-color: black;
+}
+
+.navbar-izq {
+    margin-left: 8%;
+}
+
+.navbar-nav {
+    margin-right: 8%;
+}
+
+.carousel-image {
+    width: 400px;
+    height: 750px;
+    object-fit: cover;
+}
+
+.navbar .logo-nav {
+    border-radius: 80%;
+}
+
+.overlay-image {
+    border-radius: 60%;
+}
+
+.quienes-somos i {
+    /*background-color: rgb(62, 174, 248);*/
+    background-color: #ffc107;
+    width: 100%;
+    height: 8%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.card {
+    background-color: #ffc107;
+}
+
+.card-title {
+    border-bottom: 2px solid white;
+}
+
+.card-text {
+    font-weight: 200;
+}
+
+.modal-content {
+    background-color: rgb(48, 47, 47);
+    font-weight: 200;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.wrap {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+footer {
+    background-image: url(../img/logos/DsoftwarelogoRound.png);
+    padding-bottom: 13px;
+}
+
+footer i a {
+    text-decoration: none;
+    background-color: black;
+}
+
+.foot {
+   /* background-color: black;*/
+}
+
+.text-sm {
+    background-color: black;
+    width: 100%;
+    margin-bottom: 0%;
+    font-size: 13px;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.7;
+}
+
+#contacto {
+    background-image: url('../img/bn.jpg');
+    background-repeat: no-repeat;
+    background-size: cover ;
+    width: 100%;
+    padding: 5%
+  
+}
+@media (max-width: 992px) {
+    .navbar {
+        position: fixed;
+    }
+
+    .navbar-nav {
+        width: 100% !important;
+    }
+
+    .navbar-nav .nav-link {
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 8px 15px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .quien {
+        display: none !important;
+    }
+
+    #destacados {
+        margin-top: 10% !important;
+    }
+}
